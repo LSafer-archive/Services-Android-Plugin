@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--OnBroadCastProcess-->
+    <!--class-->
+    <string name="OnBroadcast">call next service when the target action get broadcast.</string>
+    <!--invoke-->
+    <string name="OnBroadcast_start">register the receiver.</string>
+    <string name="OnBroadcast_stop">unregister the receiver.</string>
+    <!--node-->
+    <string name="OnBroadcast_action">the action to listen to.</string>
+    <!--node values-->
+    <string-array name="OnBroadcast_action">
+        <item>when power cable plugged in</item>
+        <item>when power cable plugged out</item>
+        <item>when device powered off</item>
+        <item>when airplane mode changed</item>
+        <item>when battery changed</item>
+        <item>when battery low</item>
+        <item>when battery OK</item>
+        <item>when camera button (if available) clicked</item>
+        <item>when configuration changed (like screen rotation)</item>
+        <item>when date change (next day)</item>
+        <item>when storage get low</item>
+        <item>when storage OK</item>
+        <item>when dock plugged/unplugged</item>
+        <item>when new application get installed</item>
+        <item>when an application get uninstalled</item>
+        <item>when headset plugged/unplugged</item>
+        <item>when input method changed</item>
+        <item>when media button clicked</item>
+        <item>when screen turned off</item>
+        <item>when screen turned on</item>
+    </string-array>
+
+
+
+    <!--OnEdgeGestureProcess-->
+    <!--class-->
+    <string name="OnEdgeGesture">Creates a Bar to the target edge and calls a specific calls to the handler the time the bar get touched.</string>
+    <!--invoke-->
+    <string name="OnEdgeGesture_start">link this with the overlay that matches this position.</string>
+    <string name="OnEdgeGesture_stop">unlink this from the linked overlay.</string>
+    <string name="OnEdgeGesture_update">unlink this from it\'s overlay and link it with the overlay that matches the new position.</string>
+    <!--node-->
+    <string name="OnEdgeGesture_alpha">transparency of the overlay.</string>
+    <string name="OnEdgeGesture_color">Color of the overlay.</string>
+    <string name="OnEdgeGesture_position">Position of where the overlay should be displayed.</string>
+    <string name="OnEdgeGesture_rotate">is allowed rotate the overlay when the screen get rotated.</string>
+    <string name="OnEdgeGesture_width">Width of the overlay.</string>
+    <!--node values-->
+    <string-array name="OnEdgeGesture_alpha">
+        <item>transparent</item>
+        <item>visible</item>
+    </string-array>
+    <string-array name="OnEdgeGesture_color">
+        <item>red</item>
+        <item>green</item>
+        <item>blue</item>
+    </string-array>
+    <string-array name="OnEdgeGesture_position">
+        <item>bottom</item>
+        <item>left</item>
+        <item>top</item>
+        <item>right</item>
+    </string-array>
+    <string-array name="OnEdgeGesture_rotate">
+        <item>rotate the overlay with screen</item>
+        <item>keep at the same physical position</item>
+    </string-array>
+    <string-array name="OnEdgeGesture_width">
+        <item>small</item>
+        <item>medium</item>
+        <item>big</item>
+    </string-array>
+
+
+
+    <!--SpamProcess-->
+    <!--class-->
+    <string name="Spam">Call the next process when a spam invocation detected.</string>
+    <!--invoke-->
+    <string name="Spam_start">check if the spams matches the spams target count.</string>
+    <!--node-->
+    <string name="Spam_spams">spams number to run.</string>
+    <string name="Spam_duration">duration to wait until next invocation happen (in milliseconds)</string>
+
+
+
+    <!--SwitchProcess-->
+    <!--class-->
+    <string name="Switch">Custom switching process. To allow the advanced user to switch values between processes.</string>
+
+
+
+    <!--AutoBrightnessProcess-->
+    <!--class-->
+    <string name="AutoBrightness">turn on/off auto brightness when called.</string>
+    <!--invoke-->
+    <string name="AutoBrightness_get">get whether the auto brightness turned on or not.</string>
+    <string name="AutoBrightness_start">turn on/of auto brightness depending on the passed status.</string>
+    <!--node-->
+    <string name="AutoBrightness_absolute">TODO</string>
+    <!--invoke parameters-->
+    <string-array name="AutoBrightness_start">
+        <item>TODO</item>
+    </string-array>
+    <!--node values-->
+    <string-array name="AutoBrightness_absolute">
+        <item>TODO</item>
+        <item>TODO</item>
+        <item>TODO</item>
+    </string-array>
+
+
+
+    <!--ChangeAudioProcess-->
+    <!--class-->
+    <string name="ChangeAudio">change the Audio Volume when called.</string>
+    <!--invoke-->
+    <string name="ChangeAudio_get">get the current targeted audio stream\'s level.</string>
+    <string name="ChangeAudio_start">set the given value as the audio stream\'s level.</string>
+    <string name="ChangeAudio_update">add the passed value to the targeted audio stream\'s level.</string>
+    <!--node-->
+    <string name="ChangeAudio_absolute">TODO</string>
+    <string name="ChangeAudio_maximum">TODO</string>
+    <string name="ChangeAudio_minimum">TODO</string>
+    <string name="ChangeAudio_show_message">is it allowed to display a message on change.</string>
+    <string name="ChangeAudio_show_toast">is it allowed to Toast on change.</string>
+    <string name="ChangeAudio_show_ui">is it allowed to show Audio UI on change.</string>
+    <string name="ChangeAudio_stream">audio stream to adjust.</string>
+    <!--invoke parameters-->
+    <string-array name="ChangeAudio_start">
+        <item>absolute value to set the audio to</item>
+    </string-array>
+    <string-array name="ChangeAudio_update">
+        <item>value level to add to the audio stream level</item>
+    </string-array>
+    <!--node values-->
+    <string-array name="ChangeAudio_absolute">
+        <item>TODO</item>
+    </string-array>
+    <string-array name="ChangeAudio_maximum">
+        <item>TODO</item>
+        <item>TODO</item>
+        <item>TODO</item>
+    </string-array>
+    <string-array name="ChangeAudio_minimum">
+        <item>TODO</item>
+    </string-array>
+    <string-array name="ChangeAudio_show_message">
+        <item>display a message</item>
+        <item>don\'t display a message</item>
+    </string-array>
+    <string-array name="ChangeAudio_show_toast">
+        <item>toast</item>
+        <item>don\'t toast</item>
+    </string-array>
+    <string-array name="ChangeAudio_show_ui">
+        <item>show audio UI</item>
+        <item>don\'t show audio UI</item>
+    </string-array>
+    <string-array name="ChangeAudio_stream">
+        <item>voice call</item>
+        <item>ringtone</item>
+        <item>media</item>
+        <item>alarm</item>
+        <item>notification</item>
+        <item>DTMF</item>
+        <item>Accessibility</item>
+    </string-array>
+
+
+
+    <!--ChangeBrightnessProcess-->
+    <!--class-->
+    <string name="ChangeBrightness">change brightness volume on called.</string>
+    <!--invoke-->
+    <string name="ChangeBrightness_get">get the current brightness level.</string>
+    <string name="ChangeBrightness_start">TODO</string>
+    <string name="ChangeBrightness_update">set brightness to the passed value.</string>
+    <!--node-->
+    <string name="ChangeBrightness_absolute">TODO</string>
+    <string name="ChangeBrightness_maximum">TODO</string>
+    <string name="ChangeBrightness_minimum">TODO</string>
+    <string name="ChangeBrightness_show_message">is it allowed to display a message on change.</string>
+    <string name="ChangeBrightness_show_toast">is it allowed to Toast on change.</string>
+    <!--invoke parameters-->
+    <string-array name="ChangeBrightness_start">
+        <item>TODO</item>
+    </string-array>
+    <string-array name="ChangeBrightness_update">
+        <item>value to set the brightness to</item>
+    </string-array>
+    <!--node values-->
+    <string-array name="ChangeBrightness_absolute">
+        <item>TODO</item>
+    </string-array>
+    <string-array name="ChangeBrightness_maximum">
+        <item>TODO</item>
+    </string-array>
+    <string-array name="ChangeBrightness_minimum">
+        <item>TODO</item>
+    </string-array>
+    <string-array name="ChangeBrightness_show_message">
+        <item>display a message</item>
+        <item>don\'t display a message</item>
+    </string-array>
+    <string-array name="ChangeBrightness_show_toast">
+        <item>toast</item>
+        <item>don\'t toast</item>
+    </string-array>
+
+
+
+    <!--ExpandStatusBarProcess-->
+    <!--class-->
+    <string name="ExpandStatusBar">Expand/Collapse notification panel on call.</string>
+    <!--invoke-->
+    <string name="ExpandStatusBar_start">Expand/Collapse the notification panel depending on the passed boolean.</string>
+    <!--node-->
+    <string name="ExpandStatusBar_absolute">TODO</string>
+    <!--invoke parameters-->
+    <string-array name="ExpandStatusBar_start">
+        <item>TODO</item>
+    </string-array>
+    <!--node values-->
+    <string-array name="ExpandStatusBar_absolute">
+        <item>TODO</item>
+    </string-array>
+
+
+
+    <!--ToastMessageProcess-->
+    <!--class-->
+    <string name="ToastMessage">task toast the passed value when called.</string>
+    <!--invoke-->
+    <string name="ToastMessage_start">toast the passed text.</string>
+    <!--node-->
+    <string name="ToastMessage_absolute">TODO</string>
+    <!--invoke parameters-->
+    <string-array name="ToastMessage_start">
+        <item>text to display</item>
+    </string-array>
+    <!--node values-->
+    <string-array name="ToastMessage_absolute">
+        <item>TODO</item>
+    </string-array>
+
+
+
+    <!--VibrateProcess-->
+    <!--class-->
+    <string name="Vibrate">vibrate on call.</string>
+    <!--invoke-->
+    <string name="Vibrate_start">vibrate as long as the passed value.</string>
+    <!--node-->
+    <string name="Vibrate_absolute">TODO</string>
+    <!--invoke parameters-->
+    <string-array name="Vibrate_start">
+        <item>vibrate length</item>
+    </string-array>
+    <!--node values-->
+    <string-array name="Vibrate_absolute">
+        <item>TODO</item>
+    </string-array>
+
+
+
+    <!--SlideProcess-->
+    <!--class-->
+    <string name="Slide">Transform X/Y changes into a value. Then pass it to the next process.</string>
+    <!--invoke-->
+    <string name="Slide_start">set the center to the passed value and set the center value from task.</string>
+    <string name="Slide_stop">reset center and center value.</string>
+    <string name="Slide_update">resolve the slide value then pass it to the task.</string>
+    <!--node-->
+    <string name="Slide_sensitivity">sensitivity while changing value.</string>
+    <!--invoke parameters-->
+    <string-array name="Slide_start">
+        <item>to resolve</item>
+    </string-array>
+    <string-array name="Slide_update">
+        <item>to resolve</item>
+    </string-array>
+    <!--node values-->
+    <string-array name="Slide_sensitivity">
+        <item>sensitive</item>
+        <item>low sensitivity</item>
+    </string-array>
+
+
+
+    <!--SwipeProcess-->
+    <!--class-->
+    <string name="Swipe">Call the next process when swipe detected.</string>
+    <!--invoke-->
+    <string name="Swipe_start">set the center value to the passed value.</string>
+    <string name="Swipe_stop">reset center value.</string>
+    <string name="Swipe_update">run the task if the user had swiped the length specified.</string>
+    <!--node-->
+    <string name="Swipe_length">smallest length to run when swiped.</string>
+    <!--invoke parameters-->
+    <string-array name="Swipe_start">
+        <item>to resolve</item>
+    </string-array>
+    <string-array name="Swipe_update">
+        <item>to resolve</item>
+    </string-array>
+    <!--node values-->
+    <string-array name="Swipe_length">
+        <item>mother swipe</item>
+        <item>child swipe</item>
+        <item>super swipe</item>
+        <item>father slap</item>
+        <item>father slap</item>
+    </string-array>
+</resources>

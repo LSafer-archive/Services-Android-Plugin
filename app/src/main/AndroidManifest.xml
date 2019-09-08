@@ -1,11 +1,224 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="lsafer.services" >
+    package="lsafer.services.plugin"
+    tools:ignore="ProtectedPermissions">
 
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"
-        tools:ignore="ProtectedPermissions" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
+    <uses-permission android:name="lsafer.services.permission.INVOKER" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:label="@string/app_name"
+        android:theme="@style/BlackAppTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning,MissingApplicationIcon">
+
+        <service
+            android:name=".bg.OnBroadcast"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="lsafer.services.permission.INVOKER">
+
+            <intent-filter>
+                <category android:name="lsafer.services.intent.category.SERVICE" />
+
+                <action android:name="lsafer.services.intent.action.INVOKE" />
+                <action android:name="lsafer.services.intent.action.SHUTDOWN" />
+                <action android:name="lsafer.services.intent.action.PROPERTIES" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".bg.OnEdgeGesture"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="lsafer.services.permission.INVOKER">
+
+            <intent-filter>
+                <category android:name="lsafer.services.intent.category.SERVICE" />
+
+                <action android:name="lsafer.services.intent.action.INVOKE" />
+                <action android:name="lsafer.services.intent.action.SHUTDOWN" />
+                <action android:name="lsafer.services.intent.action.PROPERTIES" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".pr.Spam"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="lsafer.services.permission.INVOKER">
+
+            <intent-filter>
+                <category android:name="lsafer.services.intent.category.SERVICE" />
+
+                <action android:name="lsafer.services.intent.action.INVOKE" />
+                <action android:name="lsafer.services.intent.action.SHUTDOWN" />
+                <action android:name="lsafer.services.intent.action.PROPERTIES" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".pr.Switch"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="lsafer.services.permission.INVOKER">
+
+            <intent-filter>
+                <category android:name="lsafer.services.intent.category.SERVICE" />
+
+                <action android:name="lsafer.services.intent.action.INVOKE" />
+                <action android:name="lsafer.services.intent.action.SHUTDOWN" />
+                <action android:name="lsafer.services.intent.action.PROPERTIES" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".sc.AutoBrightness"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="lsafer.services.permission.INVOKER">
+
+            <intent-filter>
+                <category android:name="lsafer.services.intent.category.SERVICE" />
+
+                <action android:name="lsafer.services.intent.action.INVOKE" />
+                <action android:name="lsafer.services.intent.action.SHUTDOWN" />
+                <action android:name="lsafer.services.intent.action.PROPERTIES" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".sc.ChangeAudio"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="lsafer.services.permission.INVOKER">
+
+            <intent-filter>
+                <category android:name="lsafer.services.intent.category.SERVICE" />
+
+                <action android:name="lsafer.services.intent.action.INVOKE" />
+                <action android:name="lsafer.services.intent.action.SHUTDOWN" />
+                <action android:name="lsafer.services.intent.action.PROPERTIES" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".sc.ChangeBrightness"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="lsafer.services.permission.INVOKER">
+
+            <intent-filter>
+                <category android:name="lsafer.services.intent.category.SERVICE" />
+
+                <action android:name="lsafer.services.intent.action.INVOKE" />
+                <action android:name="lsafer.services.intent.action.SHUTDOWN" />
+                <action android:name="lsafer.services.intent.action.PROPERTIES" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".sc.ExpandStatusBar"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="lsafer.services.permission.INVOKER">
+
+            <intent-filter>
+                <category android:name="lsafer.services.intent.category.SERVICE" />
+
+                <action android:name="lsafer.services.intent.action.INVOKE" />
+                <action android:name="lsafer.services.intent.action.SHUTDOWN" />
+                <action android:name="lsafer.services.intent.action.PROPERTIES" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".sc.ToastMessage"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="lsafer.services.permission.INVOKER">
+
+            <intent-filter>
+                <category android:name="lsafer.services.intent.category.SERVICE" />
+
+                <action android:name="lsafer.services.intent.action.INVOKE" />
+                <action android:name="lsafer.services.intent.action.SHUTDOWN" />
+                <action android:name="lsafer.services.intent.action.PROPERTIES" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".xy.Slide"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="lsafer.services.permission.INVOKER">
+
+            <intent-filter>
+                <category android:name="lsafer.services.intent.category.SERVICE" />
+
+                <action android:name="lsafer.services.intent.action.INVOKE" />
+                <action android:name="lsafer.services.intent.action.SHUTDOWN" />
+                <action android:name="lsafer.services.intent.action.PROPERTIES" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".xy.Swipe"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="lsafer.services.permission.INVOKER">
+
+            <intent-filter>
+                <category android:name="lsafer.services.intent.category.SERVICE" />
+
+                <action android:name="lsafer.services.intent.action.INVOKE" />
+                <action android:name="lsafer.services.intent.action.SHUTDOWN" />
+                <action android:name="lsafer.services.intent.action.PROPERTIES" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".sc.Vibrate"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="lsafer.services.permission.INVOKER">
+
+            <intent-filter>
+                <category android:name="lsafer.services.intent.category.SERVICE" />
+
+                <action android:name="lsafer.services.intent.action.INVOKE" />
+                <action android:name="lsafer.services.intent.action.SHUTDOWN" />
+                <action android:name="lsafer.services.intent.action.PROPERTIES" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".bg.OnBroadcast$Receiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+                <action android:name="android.intent.action.BATTERY_LOW" />
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+                <action android:name="android.intent.action.CAMERA_BUTTON" />
+                <action android:name="android.intent.action.CONFIGURATION_CHANGED" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+                <action android:name="android.intent.action.DOCK_EVENT" />
+                <action android:name="android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE" />
+                <action android:name="android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE" />
+                <action android:name="android.intent.action.HEADSET_PLUG" />
+                <action android:name="android.intent.action.INPUT_METHOD_CHANGED" />
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.PermissionsActivity" />
+    </application>
 </manifest>

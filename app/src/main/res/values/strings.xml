@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LSS Plugin</string>
+
+    <string name="abs__permissions">Permissions</string>
+    <string name="abs__plugin">Plugin</string>
+    <string name="abs__battery_optimization">Battery Optimization</string>
+    <string name="txt__description_battery_optimization">TODO</string>
+    <string name="abs__foreground_service">Foreground Service</string>
+    <string name="txt__description_foreground_service">TODO</string>
+    <string name="abs__invoker">Invoker</string>
+    <string name="txt__description_invoker">TODO</string>
+    <string name="asb__general">General</string>
+    <string name="txt__description_permissions">Manage application\'s permissions</string>
+    <string name="abs__processes">Processes</string>
+    <string name="abs__display_over_other_apps">Display Over Other Apps</string>
+    <string name="txt__description_display_over_other_apps">TODO</string>
+    <string name="abs__write_system_settings">Write System Settings</string>
+    <string name="txt__description_write_system_settings">TODO</string>
+</resources>

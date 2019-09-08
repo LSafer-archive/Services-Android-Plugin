@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="?android:colorPrimaryDark"
+              android:orientation="vertical"
+              tools:context=".activity.PermissionsActivity">
+
+    <LinearLayout style="@style/kroov_head">
+
+        <TextView
+                style="@style/kroov_title"
+                android:text="@string/abs__permissions"/>
+
+    </LinearLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="50dp">
+
+            <TextView
+                    style="@style/kroov_separator"
+                    android:text="@string/abs__plugin"/>
+
+            <LinearLayout style="@style/kroov_box">
+
+                <LinearLayout style="@style/kroov_drawer">
+
+                    <TextView
+                            style="@style/kroov_name"
+                            android:text="@string/abs__battery_optimization"/>
+
+                    <TextView
+                            style="@style/kroov_description"
+                            android:text="@string/txt__description_battery_optimization"/>
+                </LinearLayout>
+
+                <CheckBox
+                        android:id="@+id/ignoreBatteryOptimization"
+                        style="@style/kroov_quarter"
+                        android:onClick="_request"/>
+
+            </LinearLayout>
+
+            <View style="@style/kroov_split"/>
+
+            <View style="@style/kroov_split"/>
+
+            <LinearLayout style="@style/kroov_box">
+
+                <LinearLayout style="@style/kroov_drawer">
+
+                    <TextView
+                            style="@style/kroov_name"
+                            android:text="@string/abs__foreground_service"/>
+
+                    <TextView
+                            style="@style/kroov_description"
+                            android:text="@string/txt__description_foreground_service"/>
+
+                </LinearLayout>
+
+                <CheckBox
+                        android:id="@+id/foregroundService"
+                        style="@style/kroov_quarter"
+                        android:onClick="_request"/>
+
+            </LinearLayout>
+
+            <View style="@style/kroov_split"/>
+
+            <LinearLayout style="@style/kroov_box">
+
+                <LinearLayout style="@style/kroov_drawer">
+
+                    <TextView
+                            style="@style/kroov_name"
+                            android:text="@string/abs__invoker"/>
+
+                    <TextView
+                            style="@style/kroov_description"
+                            android:text="@string/txt__description_invoker"/>
+
+                </LinearLayout>
+
+                <CheckBox
+                        android:id="@+id/invoker"
+                        style="@style/kroov_quarter"
+                        android:onClick="_request"/>
+
+            </LinearLayout>
+
+            <View style="@style/kroov_split"/>
+
+            <TextView
+                    style="@style/kroov_separator"
+                    android:text="@string/abs__processes"/>
+
+            <LinearLayout style="@style/kroov_box">
+
+                <LinearLayout style="@style/kroov_drawer">
+
+                    <TextView
+                            android:text="@string/abs__display_over_other_apps"
+                            style="@style/kroov_name"/>
+
+                    <TextView
+                            android:text="@string/txt__description_display_over_other_apps"
+                            style="@style/kroov_description"/>
+
+                </LinearLayout>
+
+                <CheckBox
+                        android:id="@+id/displayOverOtherApps"
+                        android:onClick="_request"
+                        style="@style/kroov_quarter"/>
+
+            </LinearLayout>
+
+            <View style="@style/kroov_split"/>
+
+            <LinearLayout style="@style/kroov_box">
+
+                <LinearLayout style="@style/kroov_drawer">
+
+                    <TextView
+                            android:text="@string/abs__write_system_settings"
+                            style="@style/kroov_name"/>
+
+                    <TextView
+                            android:text="@string/txt__description_write_system_settings"
+                            style="@style/kroov_description"/>
+
+                </LinearLayout>
+
+                <CheckBox
+                        android:id="@+id/writeSystemSettings"
+                        android:onClick="_request"
+                        style="@style/kroov_quarter"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -5,6 +5,7 @@ android {
     buildToolsVersion "29.0.0"
 
     defaultConfig {
+        applicationId "lsafer.services.plugin"
         minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
@@ -28,11 +29,10 @@ android {
 }
 
 dependencies {
-    compileOnly internal('aunionx.libraries.LSaferSE:LSafer-Android@aar')
-    compileOnly internal('aunionx.libraries.LSaferSE:Services-Android@aar')
-    compileOnly internal('aunionx.libraries.LSaferSE:LSafer@jar')
+    implementation internal('aunionx.libraries.LSaferSE:LSafer-Android@aar')
+    implementation internal('aunionx.libraries.LSaferSE:Services-Android@aar')
+    implementation internal('aunionx.libraries.LSaferSE:LSafer@jar')
 
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
 
     testImplementation 'junit:junit:4.13-beta-3'
