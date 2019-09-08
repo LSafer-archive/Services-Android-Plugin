@@ -15,7 +15,7 @@
 
     <application
         android:label="@string/app_name"
-        android:theme="@style/BlackAppTheme"
+        android:theme="@style/KroovBlackAppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning,MissingApplicationIcon">
 
         <service
